@@ -1,3 +1,8 @@
+#**  Write a Python program that inputs a list of words, separated by whitespace,
+     and outputs how many times each word appears in the list #**
+
+
+
 words=[]
 n=int(input("enter the size of the list"))
 for x in range(n):
