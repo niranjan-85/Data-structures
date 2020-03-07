@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+typedef int I;
+typedef struct complex{
+	I r,img;
+};
+complex number1,number2;
+
+int add_r(complex number1,complex number2) {
+	return number1.r + number2.r;
+}
+int add_img(complex number1, complex number2) {
+	return number1.img + number2.img;
+}
+int subtract_r(complex number1, complex number2) {
+	return number1.r - number2.r;
+}
+int subtract_img(complex number1, complex number2) {
+	return number1.img - number2.img;
+}
+void main() {
+	std::cout << "Enter real part and imaginary part of the 1st complex number";
+	std::cin >> number1.r >> number1.img;
+	std::cout << "Enter real part and imaginary part of the 2nd complex number";
+	std::cin >> number2.r >> number2.img;
+	I r_Add = add_r(number1, number2);
+	I img_Add = add_img(number1, number2);
+	I rsub = subtract_r(number1, number2);
+	I img_sub = subtract_img(number1, number2);
+	cout << "The added result is: " << r_Add << "+i" << "("<<img_Add<<")"<<endl;
+	cout << "Subtracted result is: " << rsub << "+i" << "(" << img_sub << ")" << endl;
+}
