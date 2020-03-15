@@ -23,13 +23,11 @@ void main() {
 			temp->next = newnode;
 			temp = newnode;
 		}
+		temp->next=newnode;
 		n = n - 1;
-		if (n == 0) {
-			temp->next = NULL;
-		}
 	}
 	temp = head;
-	for (I i = 0; i < 3; i++) {
+	while(temp!=NULL) {
 		cout << temp->data<<endl;
 		cout << temp->next << endl;;
 		temp = temp->next;
