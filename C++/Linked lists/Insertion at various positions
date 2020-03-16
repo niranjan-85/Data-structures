@@ -39,12 +39,16 @@ void insert() {
 }
 
 void insert_end() {
-	struct node *end;
+	struct node *end,*trav;
+	trav=head;
 	end = (struct node*)malloc(sizeof(struct node));
 	cout << "Enter data" << endl;
 	cin >> end->data;
-	end->next = NULL;
-	temp->next = end;
+	while(trav->next != 0) {
+	      trav = trav->next;
+	}
+	trav->next = end;
+	end->next = 0;
 
 }
 
@@ -102,9 +106,11 @@ void  main() {
 		}
 		case 4: {
 			insert_end();
+			break;
 		}
 		case 5: {
 			insert_atgivenpos();
+			break;
 		}
 		}
 
