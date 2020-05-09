@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+void insert(int a[],int length) {
+	int pos,num;
+	cout << "Enter position " << endl;
+	cin >> pos;
+	cout << "Enter number to insert" << endl;
+	cin >> num;
+	if (pos == length) {
+		a[length] = num;
+	}
+	for (int i = length-1; i >= pos-1; i--) {
+		a[i + 1] = a[i];
+		if (i == pos-1) {
+			a[i] = num;
+		}
+	}
+
+	cout << "Resultant Array is : " << endl;
+	for (int i = 0; i <= length; i++) {
+		cout << a[i] << " ";
+	}
+
+}
+
+void delete_a(int a[],int length) {
+	int pos, num;
+	cout << "Enter position " << endl;
+	cin >> pos;
+	for (int i = pos-1; i < length-1; i++) {
+		a[i] = a[i + 1];
+	}
+	cout << "Resultant array: "<<endl;
+	for (int i = 0; i < length-1; i++) {
+		cout << a[i] << " ";
+	}
+}
+
+
+void main() {
+	int a[100],length,choice;
+	cout << "Enter the length of the array" << endl;
+	cin >> length;
+	cout << "enter elements in an array" << endl;
+	for (int i = 0; i < length; i++) {
+		cin >> a[i];
+	}
+	cout << "Enter your choice : \n 1.Inseting \n 2.Deleting"<<endl;
+	cin >> choice;
+	switch (choice) {
+	case 1:
+		insert(a, length);
+	    break;
+	case 2:
+		delete_a(a, length);
+		break;
+	case 3:
+
+	}
+
+	}
