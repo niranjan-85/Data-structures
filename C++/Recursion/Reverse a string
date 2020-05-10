@@ -18,3 +18,36 @@ void main() {
 	length_ = strlen(a)-2;
 	char k= recurse(a, length_);
 }
+
+
+// Better Version //
+
+#include<iostream>
+using namespace std;
+void reverse(char a[],int n,int i,int j) {
+	int temp;
+	if (i <= j ) {
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+		return(reverse(a, n,i + 1, j - 1));
+	}
+	for (int k = 0; k < n; k++) {
+		cout << a[k];
+	}
+
+}
+void main() {
+	char a[20];
+	int length;
+	cout << "Enter length" << endl;
+	cin >> length;
+	cout << "Enter string" << endl;
+	for (int j = 0; j < length; j++) {
+		cin >> a[j];
+	}
+	int i = 0;
+	reverse(a,length,i,length-1);
+
+
+}
