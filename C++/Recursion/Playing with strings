@@ -1,0 +1,29 @@
+
+// https://www.geeksforgeeks.org/replace-all-occurrences-of-pi-with-3-14-in-a-given-string/ //
+
+
+#include<bits/stdc++.h>
+using namespace std;
+string r = "";
+void replace(string s,int l,int i,int j) {
+	if (j < l || i<l) {
+		if (s[i] == 'p' && s[j] == 'i') {
+			r+="3.14";
+			return replace(s, l, i + 2, j + 2);
+		}
+		else
+		{
+			r += s[i];
+			return replace(s, l, i + 1,j + 1);
+		}
+	}
+	cout << r;
+}
+void main() {
+
+	string s;
+	cin >> s;
+	int i = 0, j = 1;
+	replace(s, s.length(),i,j);
+	
+}
