@@ -1,0 +1,101 @@
+#include<bits/stdc++.h>
+using namespace std;
+void intersction(int a[],int b[]) {
+	int res[10],i=0,j=0,k=0,l=0;
+	while (i < 4 && j < 4) {
+		if (a[i] < b[j]) {
+			i++;
+		}
+		else if(a[i]==b[j]){
+			res[k] = a[i];
+			i++;
+			j++;
+			k++;
+		}
+		else
+		{
+			j++;
+		}
+	}
+
+	while (l < k) {
+		cout << res[l]<<" ";
+		l++;
+	}
+	cout << endl;
+
+}
+
+void union_a(int a[],int b[]) {
+	int res[10], i = 0, j = 0, k = 0, l = 0;
+	while (i < 4 && j < 4) {
+		if (a[i] < b[j]) {
+			res[k] = a[i];
+			k++;
+			i++;
+		}
+		else if (a[i] == b[j]) {
+			res[k] = a[i];
+			i++;
+			j++;
+			k++;
+		}
+		else
+		{
+			res[k] = b[j];
+			k++;
+			j++;
+		}
+	}
+	for (; i < 4; i++) {
+		res[k] = a[i];
+		k++;
+	}
+	for (; j < 4; j++) {
+		res[k] = b[j];
+		k++;
+	}
+
+	while (l < k) {
+		cout << res[l]<<" ";
+		l++;
+	}
+	cout <<endl;
+
+}
+
+void difference(int a[],int b[]) {
+	int res[10], i = 0, j = 0, k = 0, l = 0;
+	while (i < 4 && j < 4) {
+		if (a[i] < b[j]) {
+			res[k] = a[i];
+			i++;
+		}
+		else if (a[i] == b[j]) {
+			i++;
+			j++;
+			k++;
+		}
+		else
+		{
+			j++;
+		}
+	}
+
+	while (l < k) {
+		cout << res[l] << " ";
+		l++;
+	}
+	cout << endl;
+
+
+}
+
+void main() {
+	int a[10] = { 4,5,6,7 };
+	int b[10] = { 5,7,10,11 };
+
+	intersction(a, b);
+	union_a(a, b);
+	difference(a, b);
+}
