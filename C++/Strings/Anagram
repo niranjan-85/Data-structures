@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+void main() {
+	bool flag=false;
+	string a = "medical";
+	string b = "decimal";
+	int h[26] = { 0 };                        # initialize h{0} and x{1}
+	int x[26];
+	for (int i = 0; i < 26; i++) {
+		x[i] = 1;
+	}
+	if (a.length() == b.length()) {
+		for (int i = 0; a[i] != '\0'; i++) {    
+			h[a[i] - 97]++;                       # keep adding 1 to h[] and 0 to x[] according to the charecters in the given string.   
+			x[b[i] - 97]--;
+		}
+		for (int j = 0; j < 26; j++) {          # main check. 
+			if ((h[j] & x[j] )> 0) {
+				cout << "Not anagram";
+				flag = true;
+				break;
+			}
+		}
+		if (flag == false) {
+			cout << "anagram";
+		}
+	}
+	else{
+		cout << "Not anagram";
+	}
+}
