@@ -1,4 +1,7 @@
 # Data Structures and Algorithms implemented in C++
+
+Data Structures:
+Organizing data in a computers memory in such a way that the data is handled efficintly is known as a data structure
 Contents :
 + [C++ Basics](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Basics)
 + [Arrays](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Arrays)
