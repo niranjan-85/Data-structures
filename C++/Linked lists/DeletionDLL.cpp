@@ -16,16 +16,21 @@ void display() {
 
 }
 
-
-
 void del_node(int p) {
 	temp = head;
 	node* ptr = head;
 	int x = 1;
 	if (p == 1) {
-		head = ptr = temp->next;
-		delete(temp);
-		temp = head;
+		if(temp->next==NULL){
+			delete(temp);
+			head=NULL;
+		}
+		else{
+			head = ptr = temp->next;
+			ptr->previous=NULL;
+			delete(temp);
+			temp = head;
+		}
 	}
 	else
 	{
