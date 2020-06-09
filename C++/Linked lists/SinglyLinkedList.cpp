@@ -24,6 +24,7 @@ void main() {
 			temp = newnode;
 		}
 		temp->next=newnode;
+		newnode->next=NULL;
 		n = n - 1;
 	}
 	temp = head;
