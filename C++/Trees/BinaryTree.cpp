@@ -7,6 +7,8 @@ typedef struct node {
 };
 node*ptr,* temp,*root,*l,*r;
 
+
+//Traverse the created tree 
 void preorder(node* root) {
 	ptr = root;
 	while (ptr) {
@@ -48,11 +50,13 @@ void create(queue <node*> q,int *arr,int len) {
 
 
 void main() {
+	//Array representation of the binary tree
 	int* b_elements = new int[100];
 	int n; std::cout << "Enter no of elements"; std::cin >> n;
 	for (int i = 0; i < n; i++) {
 		std::cin >> b_elements[i];
 	}
+	//queue to store the adresses
 	queue <node*> bt_add;
 	create(bt_add,b_elements,n);
 
