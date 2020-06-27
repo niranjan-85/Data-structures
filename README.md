@@ -11,4 +11,5 @@ Contents :
 + [Strings](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Strings)
 + [Stacks](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Stacks)
 + [Queues](https://github.com/niranjan-85/Data-structures/tree/master/C++/Queues)
++ [Trees](https://github.com/niranjan-85/Data-structures/tree/master/C++/Queues)
 
