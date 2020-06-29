@@ -11,7 +11,7 @@ node*ptr,* temp,*root,*l,*r;
 //Traverse the created tree 
 void preorder(node* root) {
 	ptr = root;
-	while (ptr) {
+	if(ptr) {
 		cout << ptr->data << endl;
 		preorder(root->left);
 		preorder(root->right);
