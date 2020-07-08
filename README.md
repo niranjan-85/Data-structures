@@ -12,6 +12,6 @@ Contents :
 + [Stacks](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Stacks)
 + [Queues](https://github.com/niranjan-85/Data-structures/tree/master/C++/Queues)
 + [Trees](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Trees)
-+ [Binary Search Trees](https://github.com/niranjan-85/Data-structures/tree/master/C%2B%2B/Trees)
++ [Binary Search Trees](https://github.com/niranjan-85/Data-structures/tree/master/C++/Binary%20Search%20Trees)
 
 
