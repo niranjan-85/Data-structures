@@ -21,9 +21,9 @@ vector<string> gets(int i,int n,string s) {
 
 
 int main() {
-	string s;
-	cin >> s;
-	for (string x : gets(0,s.length()-1,s)) {
+	int n;
+	cin >> n;
+	for (string x : gets(n)) {
 		cout << x <<endl;
 	}
 }
