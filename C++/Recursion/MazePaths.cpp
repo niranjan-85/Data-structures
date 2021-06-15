@@ -37,3 +37,33 @@ int main() {
 		cout << x << endl;
 	}
 }
+
+
+
+// print maze paths
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void mazepaths(int sr,int sc,int dr,int dc,string ans) {
+
+	if (sr > dr || sc > dc) {
+		return;
+	}
+	else if (sr == dr && sc == dc) {
+		cout << ans << endl;
+		return;
+	}
+	
+	mazepaths(sr + 1, sc, dr, dc,ans+"v");
+	mazepaths(sr, sc + 1, dr, dc,ans+"h");
+}
+
+
+int main() {
+	int sc, sr, dc, dr;
+	string ans = "";
+	cin >> sc>>sr>>dc>>dr;
+	mazepaths(sr,sc,dr,dc,ans);
+}
