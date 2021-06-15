@@ -27,3 +27,35 @@ int main() {
 		cout << x <<endl;
 	}
 }
+
+
+
+// Print keypad combinations (To optimize space) :
+
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<string> keypad = { ".,","abc","def","ghi","jkl","mno","pqrs","tu","uvx","yz" };
+
+void combination(string inputString,string answer) {
+
+	if (inputString.length() == 0) {
+		cout << answer << endl;
+		return;
+	}
+
+	string substring = inputString.substr(1);
+	int index = (int)(inputString[0] - 48);
+	string keyseq = keypad[index];
+	for (int i = 0; i < keyseq.length(); i++) {
+		combination(substring, answer + keyseq[i]);
+	}
+}
+
+
+int main() {
+	string s;
+	string ans = "";
+	cin >> s;
+	combination(s,ans);
+}
