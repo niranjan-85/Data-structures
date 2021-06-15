@@ -41,3 +41,42 @@ int main() {
 		cout << x << endl;
 	}
 }
+
+
+
+
+
+// print stair paths ( To optimize space )
+
+
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void stairpaths(int n,string answer) {
+
+	if (n == 0) {
+		cout << answer << endl;
+		return;
+	}
+	else if (n < 0) {
+		return;
+	}
+
+	stairpaths(n - 1, answer + char(49));
+	stairpaths(n - 2, answer + char(50));
+	stairpaths(n - 3, answer + char(51));
+	
+}
+
+
+int main() {
+	int n;
+	string ans = "";
+	cin >> n;
+	stairpaths(n,ans);
+}
