@@ -27,3 +27,34 @@ int main() {
 		cout << x <<endl;
 	}
 }
+
+
+
+// Print subsequence 
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+void printsubsequence(string inputString,string answer) {
+	if (inputString.length() == 0) {
+		cout << answer << endl;
+		return;
+	}
+	char ch = inputString[0];
+	string substring = inputString.substr(1);
+	printsubsequence(substring,answer+ch);
+	printsubsequence(substring, answer + "");
+}
+
+
+int main() {
+	string s;
+	string ans = "";
+	cin >> s;
+	printsubsequence(s,ans );
+}
